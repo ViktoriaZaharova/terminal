@@ -570,7 +570,8 @@ header {
 .advantages-box__num {
   font-size: 24px;
   font-weight: bold;
-  color: #C32032; }
+  color: #C32032;
+  height: 27px; }
 
 .num-overlay {
   position: absolute;
@@ -743,7 +744,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 23px; }
+  margin: 0 0 23px;
+  min-height: 103px; }
 
 .slick-slide {
   outline: none; }
@@ -1419,7 +1421,9 @@ footer {
   .reviews-box h3 {
     font-size: 20px; }
   .logo-company {
-    max-width: 100px; } }
+    max-width: 100px; }
+  .reviews-box__top {
+    min-height: auto; } }
 
 @media only screen and (max-width: 360px) {
   .category-links {
