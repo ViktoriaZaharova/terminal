@@ -390,8 +390,12 @@ header {
   .category-links:last-child:after {
     display: none; }
   .category-links:hover {
-    color: #fff;
-    background: #003764; }
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 14px rgba(0, 55, 100, 0.2);
+            box-shadow: 0 2px 14px rgba(0, 55, 100, 0.2);
+    z-index: 1; }
+    .category-links:hover:after, .category-links:hover:before {
+      opacity: 0; }
     .category-links:hover .icon-arrow {
       display: block; }
   .category-links .icon-arrow {
@@ -402,6 +406,13 @@ header {
     -webkit-transition: .3s ease;
     transition: .3s ease;
     margin: auto 0 0 auto; }
+
+.category-links-one {
+  background: #003764;
+  color: #fff; }
+  .category-links-one:hover {
+    -webkit-box-shadow: 0px 2px 10px #003764;
+            box-shadow: 0px 2px 10px #003764; }
 
 .main-content {
   width: calc(100% - 480px);
@@ -422,11 +433,13 @@ header {
     transition: .3s ease; }
   .links-accent:hover .text {
     border-color: #C32032; }
+  .links-accent:hover .icon-svg {
+    margin: 0 0 0 16px; }
   .links-accent .icon-svg {
     width: 12px;
     height: 10px;
     fill: #C32032;
-    margin: 0 0 0 16px; }
+    margin: 0 0 0 13px; }
 
 .bg-accent {
   background: #003764;
@@ -627,12 +640,17 @@ header {
   border-radius: 3px;
   width: 136px;
   min-width: 136px;
-  margin: 0 0 0 auto; }
+  margin: 0 0 0 auto;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
   .slider-nav .icon-svg {
     margin: 0 28px;
     width: 2px;
     height: 14px;
     fill: #003764; }
+  .slider-nav:hover {
+    -webkit-box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1);
+            box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1); }
 
 .slick-arrow {
   position: relative;
@@ -661,7 +679,10 @@ header {
           order: 1; }
 
 .slick-disabled {
-  opacity: .5; }
+  opacity: .5;
+  cursor: inherit; }
+  .slick-disabled:hover svg {
+    fill: #003764; }
 
 .reviews-slider {
   width: calc(100% - 400px); }
@@ -772,34 +793,9 @@ header {
 .order-services {
   padding: 80px 0 96px;
   position: relative;
-  color: #fff; }
-  .order-services:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 70%;
-    background: url("../img/bg2.jpg") no-repeat center;
-      background-size: cover; }
-  .order-services:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30%;
-    height: 100%;
-    background: url("../img/bg3.jpg") no-repeat center;
-      background-size: cover; }
-  .order-services .container {
-    position: relative;
-    z-index: 1;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+  color: #fff;
+  background: url("../img/bg_2.png") no-repeat center;
+    background-size: cover; }
   .order-services h2 {
     color: #fff; }
   .order-services .box-text {
@@ -811,12 +807,8 @@ header {
 
 .order-services__content {
   max-width: 400px;
-  width: 100%; }
-
-.order-services__img {
-  max-width: 853px;
   width: 100%;
-  margin: 0 -125px 0 -50px; }
+  margin: 0 0 0 160px; }
 
 .partners {
   padding: 50px 0 60px; }
@@ -992,7 +984,7 @@ footer {
   padding: 10px; }
 
 .news-block__content {
-  padding: 0 0 0 40px;
+  padding: 30px 0 30px 40px;
   width: calc(100% - 280px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1024,6 +1016,8 @@ footer {
     height: 10px;
     margin: 0 0 0 13px;
     fill: #C32032; }
+  .links-red:hover .icon-svg {
+    margin: 0 0 0 16px; }
 
 .news-block__img {
   width: 280px;
@@ -1101,9 +1095,6 @@ footer {
 @media only screen and (max-width: 1200px) {
   .container {
     padding: 0 15px; }
-  .order-services__img {
-    max-width: 600px;
-    margin: 0 0 0 -50px; }
   .footer-bottom .container {
     padding: 20px 15px; } }
 
@@ -1160,21 +1151,9 @@ footer {
   .box-text {
     font-size: 16px; }
   .order-services__content {
-    max-width: none;
-    width: 100%; }
-  .order-services__img {
-    margin: 20px auto; }
+    margin: 0; }
   .order-services {
-    padding: 40px 0 0; }
-    .order-services:before {
-      width: 100%;
-      height: 70%; }
-    .order-services:after {
-      top: auto;
-      bottom: 0;
-      width: 100%;
-      height: 30%;
-      background-position: left top; }
+    padding: 40px 0; }
     .order-services .box-text {
       margin: 30px 0 40px; }
   .date {
