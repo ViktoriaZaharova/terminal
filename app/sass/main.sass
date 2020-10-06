@@ -1,0 +1,890 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  background: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+.container
+  max-width: 1180px
+  width: 100%
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+
+a
+  display: block
+  outline: none
+  text-decoration: none
+  transition: .3s ease
+  &:hover, &:focus
+    text-decoration: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  height: 70px
+  font-weight: bold
+  width: 100%
+  border-radius: 3px
+  font-size: 18px
+
+.btn-border
+  border: 1px solid #003764
+  color: $red
+  height: 50px
+  font-size: 16px
+  &:hover
+    color: $accent
+
+.btn-red
+  height: 70px
+  box-shadow: 0px 2px 10px #C32032
+  background: $red
+  color: #fff
+  padding: 0 28px
+  &:hover
+    background: $accent
+    box-shadow: 0px 2px 10px #003764
+
+.btn-white
+  background: #fff
+  color: $red
+  &:hover
+    color: $accent
+
+.btn-grey
+  background: #EBF0F5
+  height: 42px
+  padding: 0
+  color: $accent
+  .icon-svg
+    fill: $red
+    margin: 0 0 0 13px
+    width: 10px
+    height: 10px
+  &:hover
+    box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1)
+
+h1
+  text-transform: uppercase
+  font-size: 36px
+  font-weight: bold
+  position: relative
+  padding: 30px 0 0
+  width: 100%
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 13px
+    height: 10px
+    background: url("../img/figure.svg") no-repeat center
+      size: contain
+
+h2
+  color: $accent
+  position: relative
+  padding: 30px 0 0
+  width: 100%
+  font-size: 36px
+  font-weight: bold
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 13px
+    height: 10px
+    background: url("../img/figure.svg") no-repeat center
+      size: contain
+
+.decor
+  position: relative
+  padding: 30px 0 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 13px
+    height: 10px
+    background: url("../img/figure.svg") no-repeat center
+      size: contain
+
+.bg-grey
+  background: #EBF0F5
+
+.p-90
+  padding: 90px 0
+
+.button-group
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+
+
+header
+  padding: 16px 0
+  .container
+    align-items: center
+    justify-content: space-between
+  .btn
+    max-width: 173px
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 30px 0 auto
+  li
+    margin: 0 30px 0 0
+    &:last-child
+      margin: 0
+    a
+      font-weight: bold
+      color: $accent
+
+.dropDown-wrapper
+  margin: 0 67px 0 0
+  position: relative
+  height: 42px
+  background: #EBF0F5
+  border-radius: 3px
+
+.lang-wrapper
+  width: 80px
+  cursor: pointer
+  transition: .3s ease
+  &:hover
+    box-shadow: inset 0 0 20px rgba(0, 55, 100, 0.1)
+    .icon-svg
+      fill: $red
+
+.dropDown-item
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: #003764
+  font-size: 14px
+  font-weight: bold
+  position: relative
+  padding: 0 18px 0 24px
+  z-index: 3
+
+.dropDwn-menu
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  background: #EBF0F5
+  border-radius: 3px
+  z-index: 2
+  display: none
+  padding: 42px 0 0
+  &:hover
+    box-shadow: inset 0 0 20px rgba(0, 55, 100, 0.1)
+
+.lang-links
+  padding: 10px 24px
+  color: rgba(0, 55, 100, 0.5)
+  font-size: 14px
+  font-weight: bold
+  &:hover
+    color: $accent
+
+.icon-dots
+  fill: $accent
+  width: 2px
+  height: 14px
+
+//main
+.main
+  background: url("../img/bg1.jpg") no-repeat center
+    size: cover
+  padding: 70px 0 0
+  color: #fff
+  .container
+    align-items: flex-start
+    justify-content: space-between
+  .btn
+    max-width: 202px
+    margin: 0 40px 0 0
+  h1
+    margin: 0 0 90px
+
+.main-category
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  width: 480px
+  margin: 0 0 -70px
+
+.category-links
+  width: 50%
+  height: 240px
+  background: #fff
+  padding: 65px 30px 40px
+  font-weight: bold
+  color: $accent
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 1px
+    height: 100%
+    right: 0
+    top: 0
+    background: rgba(0, 0, 0, 0.2)
+  &:after
+    content: ''
+    position: absolute
+    width: calc(100% - 30px)
+    height: 1px
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.2)
+  &:nth-child(even)
+    &:before
+      display: none
+    &:after
+      right: auto
+      left: 0
+  &:first-child
+    &:before
+      height: calc(100% - 30px)
+      top: auto
+      bottom: 0
+  &:nth-child(5)
+    &:before
+      height: calc(100% - 30px)
+    &:after
+      display: none
+  &:last-child
+    &:after
+      display: none
+  &:hover
+    color: #fff
+    background: $accent
+    .icon-arrow
+      display: block
+  .icon-arrow
+    width: 17px
+    height: 17px
+    fill: $red
+    display: none
+    transition: .3s ease
+    margin: auto 0 0 auto
+
+.main-content
+  width: calc(100% - 480px)
+  padding: 40px 126px 0 0
+
+
+.links-accent
+  display: flex
+  align-items: center
+  color: #fff
+  font-size: 18px
+
+  .text
+    border-bottom: 1px solid #fff
+    transition: .3s ease
+  &:hover
+    .text
+      border-color: $red
+  .icon-svg
+    width: 12px
+    height: 10px
+    fill: $red
+    margin: 0 0 0 16px
+
+.bg-accent
+  background: $accent
+  color: #fff
+
+.advantages-company
+  padding: 70px 0 94px
+  .container
+    align-items: flex-start
+
+.advantages-company__box
+  margin: 0 102px 0 0
+  font-size: 18px
+  max-width: 130px
+  p
+    line-height: 1
+    font-size: 36px
+    margin: 0 0 8px
+    display: flex
+    align-items: flex-end
+    sup
+      font-size: 18px
+      margin: 0 0 0 4px
+  span
+    mix-blend-mode: normal
+    opacity: .5
+
+//about
+.about
+  .container
+    align-items: stretch
+    justify-content: space-between
+  .btn
+    max-width: 260px
+
+.about-img
+  width: 500px
+
+.about-content
+  width: calc(100% - 500px)
+  padding: 0 0 0 80px
+  display: flex
+  flex-direction: column
+  .box-text
+    margin: 50px 0 auto
+
+
+.box-text
+  font-size: 18px
+  p
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+
+.advantages
+  padding: 90px 0 70px
+
+.advantages-wrapper
+  margin: 50px 0 0
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: space-between
+
+.advantages-box
+  margin: 0 0 20px
+  position: relative
+  height: 270px
+  background: #EBF0F5
+  width: 32.5%
+  padding: 30px
+  overflow: hidden
+  cursor: pointer
+  color: $accent
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  .btn
+    margin: auto 0 0
+    max-width: 170px
+  &:hover
+    .advantages-box__content
+      display: block
+  .text
+    margin: 29px 0 0
+    color: #003764
+    font-size: 18px
+  h3
+    font-size: 24px
+    font-weight: bold
+    margin: 29px 0 0
+
+.advantages-box__num
+  font-size: 24px
+  font-weight: bold
+  color: $red
+
+.num-overlay
+  position: absolute
+  left: 24px
+  bottom: -5px
+
+.advantages-box__content
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 1
+  width: 100%
+  height: 100%
+  padding: 60px 30px
+  color: rgba(255, 255, 255, 0.9)
+  font-size: 16px
+  font-weight: bold
+  background: $accent
+  overflow: hidden
+  transition: .3s ease
+  display: none
+  &:before
+    content: ''
+    position: absolute
+    left: 30px
+    top: 30px
+    width: 13px
+    height: 10px
+    background: url("../img/figure.svg") no-repeat center
+      size: contain
+
+.bg-border
+  border: 4px solid #EBF0F5
+  background: #fff
+
+.line-title
+  width: 100%
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  margin: 0 0 50px
+  h2
+    width: auto
+  .btn
+    max-width: 178px
+    margin: 0 0 0 122px
+
+.slider-nav
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #EBF0F5
+  height: 42px
+  border-radius: 3px
+  width: 136px
+  margin: 0 0 0 auto
+  .icon-svg
+    margin: 0 28px
+    width: 2px
+    height: 14px
+    fill: $accent
+
+.slick-arrow
+  position: relative
+  top: 0
+  right: 0
+  left: 0
+  transform: none
+  background: transparent
+  width: 19px
+  height: 10px
+  &:before
+    display: none
+  svg
+    width: 100%
+    height: 100%
+    fill: $accent
+    transition: .3s ease
+  &:hover
+    svg
+      fill: $red
+
+.slick-next
+  order: 1
+
+.slick-disabled
+  opacity: .5
+
+//.reviews
+.reviews-slider
+  width: calc(100% - 400px)
+
+.reviews
+  padding: 0 0 90px
+
+.reviews-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+
+.reviews-img
+  width: 507px
+  margin: 0 0 0 -150px
+
+.reviews-box
+  display: flex
+  padding: 40px 40px 65px
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  background: #fff
+  flex-direction: column
+  align-items: flex-start
+  min-height: 400px
+  h3
+    font-size: 24px
+    font-weight: bold
+    color: $accent
+  .box-text
+    font-size: 18px
+    font-weight: normal
+    max-width: 440px
+
+.reviews-box__top
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 23px
+
+.slick-slide
+  outline: none
+
+.slick-dots
+  width: 100%
+  bottom: 40px
+  padding: 0 60px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  li
+    display: flex
+    align-items: center
+    width: 5px
+    height: 5px
+    margin: 0 35px 0 0
+    transition: .3s ease
+    border-radius: 50%
+    background: #003764
+
+    button
+      display: none
+    a
+      display: none
+  .slick-active
+    width: auto
+    height: auto
+    background: transparent
+    margin: 0 27px 0 0
+    a
+      display: block
+      font-size: 24px
+      font-weight: bold
+      color: $red
+
+//order-services
+.order-services
+  padding: 80px 0 96px
+  position: relative
+  color: #fff
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 70%
+    background: url("../img/bg2.jpg") no-repeat center
+      size: cover
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    width: 30%
+    height: 100%
+    background: url("../img/bg3.jpg") no-repeat center
+      size: cover
+  .container
+    position: relative
+    z-index: 1
+    align-items: center
+    justify-content: flex-end
+  h2
+    color: #fff
+  .box-text
+    margin: 50px 0 80px
+    font-weight: normal
+  .btn
+    max-width: 202px
+    margin: 0 40px 0 0
+
+.order-services__content
+  max-width: 400px
+  width: 100%
+
+.order-services__img
+  max-width: 853px
+  width: 100%
+  margin: 0 -125px 0 -50px
+
+//partners
+.partners
+  padding: 50px 0 60px
+  .container
+    align-items: flex-start
+    justify-content: space-between
+  .box-text
+    margin: 50px 0 0
+    font-size: 16px
+    font-weight: normal
+    opacity: .5
+    mix-blend-mode: normal
+    color: #000
+
+.partners-content
+  max-width: 370px
+  width: 100%
+
+.partners-logos
+  width: calc(100% - 370px)
+  padding: 0 150px 0 180px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.partners-logo
+  width: 33.3%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 0 30px
+  padding: 0 30px
+
+//footer
+footer
+  padding: 70px 0 0
+  .btn
+    max-width: 173px
+  .logo
+    max-width: 119px
+
+.footer-bottom
+  .container
+    padding: 30px 0
+    border-top: 1px solid rgba(0, 0, 0, 0.2)
+    justify-content: space-between
+    color: #000
+
+.footer-box
+  color: #000
+
+.links
+  color: rgba(0, 0, 0, 0.7)
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+
+.color-red
+  color: $red
+
+.footer-top
+  padding: 0 0 90px
+  .container
+    align-items: flex-end
+    justify-content: space-between
+
+.phone
+  font-size: 28px
+  font-weight: bold
+  color: $accent
+  margin: 45px 0 15px
+
+.schedule
+  margin: 0 0 30px
+  opacity: .5
+  mix-blend-mode: normal
+  color: #000
+
+.footer-menu
+  li
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+    a
+      font-weight: bold
+      color: #000
+    .color-red
+      color: $red
+
+.footer-box-img
+  margin: 0 0 72px
+  max-width: 265px
+  width: 100%
+
+.mail
+  border-bottom: 1px solid $red
+  color: #000000
+  margin: 0 0 20px
+
+.box-contacts
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  a
+    color: #000
+  p
+    display: flex
+    align-items: center
+    margin: 0 0 42px
+    a
+      margin: 0 0 0 5px
+
+//.news
+.news-slider
+  width: 100%
+  h3
+    font-size: 24px
+    font-weight: bold
+    color: $accent
+
+
+
+
+.news-block__wrapper
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  justify-content: space-between
+
+.news-block
+  width: calc(100% - 300px)
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  background: #fff
+  padding: 10px
+
+.news-block__content
+  padding: 0 0 0 40px
+  width: calc(100% - 280px)
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  .box-text
+    margin: 42px 0 auto
+    font-size: 18px
+    font-weight: normal
+    max-width: 450px
+
+
+.links-red
+  color: $red
+  display: flex
+  align-items: center
+  font-size: 18px
+  .icon-svg
+    width: 12px
+    height: 10px
+    margin: 0 0 0 13px
+    fill: $red
+
+
+.news-block__img
+  width: 280px
+  height: 360px
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(0, 55, 100, 0.4), rgba(0, 55, 100, 0.4))
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.poster-news
+  width: 280px
+  padding: 40px 30px
+
+.date
+  opacity: 0.5
+  font-size: 18px
+  font-weight: bold
+  mix-blend-mode: normal
+  color: $accent
+  margin: 0 0 40px
+
+
+
+@import "media"
+// Всегда в конце
