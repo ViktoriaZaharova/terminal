@@ -55,18 +55,40 @@
     font-size: 14px
 
   header
+    padding: 16px 0
+    box-shadow: 0 0 24px rgba(0, 55, 100, 0.1)
     .logo
-      max-width: 60px
+      max-width: 71px
     .btn
       max-width: 140px
 
+  .main
+    padding: 0
+    background: #fff
+
   .main-category
     width: 100%
-    margin: 30px auto
+    margin: -40px auto
+
+  .advantages-company
+    padding: 100px 0 60px
 
   .main-content
-    padding: 0
+    padding: 30px 0 107px
     width: 100%
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 0
+      transform: translate(-50%,0)
+      width: calc(100% + 30px)
+      height: 100%
+      background: url("../img/bg1.jpg") no-repeat center top
+        size: cover
+    > *
+      position: relative
 
   .about-img
     width: 300px
@@ -126,7 +148,7 @@
       margin: 20px 0 0
 
   .partners
-    padding: 40px 0 0
+    padding: 50px 0
 
   .phone
     font-size: 18px
@@ -145,23 +167,9 @@
     font-size: 14px
 
 @media only screen and (max-width : 768px)
-  .menu
+  header .menu
     display: none
-    position: absolute
-    left: 0
-    top: 0
-    width: 280px
-    height: 100%
-    padding: 30px
-    flex-direction: column
-    align-items: flex-start
-    z-index: 5
-    background: $accent
-    li
-      margin: 0 0 20px
-      a
-        color: #fff
-        font-size: 16px
+
 
   .btn-burger
     display: flex
@@ -172,6 +180,14 @@
     order: 1
 
   header
+    .logo
+      max-width: none
+      width: 71px
+      height: 65px
+      background: url("../img/logo-footer.svg") no-repeat center
+        size: contain
+      img
+        display: none
     .btn
       margin: 0 auto
 
@@ -179,27 +195,33 @@
     margin: 0
 
   .advantages-company
-    padding: 30px 0
     .container
       justify-content: space-around
 
-  .about-content
-    width: 100%
-    order: -1
-    padding: 0
-    margin: 0 0 30px
-
   .p-90
-    padding: 60px 0
+    padding: 50px 0
+
+  .about
+    padding: 0
+    .container
+      padding: 0
 
   .about-img
     width: 100%
     max-width: none
+    img
+      width: 100%
+
+  .about-content
+    width: 100%
+    padding: 50px 20px
+
+  .reviews
+    padding: 0 0 50px
 
   .reviews-img
     width: 100%
-    order: 1
-    margin: 30px auto 0
+    margin: 0 auto 40px
 
   .reviews-slider
     width: 100%
@@ -217,6 +239,15 @@
   .line-title .btn
     margin: 0 0 0 20px
 
+  .slider-nav-mobile
+    display: flex
+
+  .reviews-slider-nav
+    display: none
+
+  .reviews-slider-nav-mobile
+    margin: 30px auto 0 0
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 680px)
@@ -226,7 +257,6 @@
   .footer-box
     font-size: 14px
     margin: 0 0 20px
-    //width: 50%
 
   .footer-menu
     margin: 0 0 20px
@@ -256,17 +286,46 @@
 
 @media only screen and (max-width : 575px)
   .advantages-wrapper
-    margin: 30px 0 0
+    margin: 38px 0 0
+    display: block
+    flex-wrap: nowrap
+    flex: none
+    width: 100%
 
   .advantages
-    padding: 40px 0
+    padding: 50px 0
 
   .advantages-box
     width: 100%
-    min-height: 200px
-    height: auto
+    height: 390px
+    padding: 30px 20px 0
+    margin: 0
+    flex: none
+    flex-wrap: nowrap
     .btn
       margin: 20px 0 0
+    &:first-child
+      .num-overlay
+        display: block
+    h3
+      font-size: 16px
+      margin: 25px 0 0
+    .text
+      font-size: 15px
+      margin: 20px 0 0
+
+  .advantages-box__num
+    font-size: 16px
+    height: 19px
+
+  .num-overlay
+    left: auto
+    right: 20px
+    width: 76px
+    bottom: -7px
+
+  .advantages-wrapper-nav
+    margin: 30px 0 0 0
 
   .advantages-box__content
     padding: 40px 20px
@@ -284,14 +343,102 @@
   .line-title
     flex-direction: column
     align-items: center
+    margin: 0 0 30px
     h2
       width: 100%
     .btn
       margin: 0 auto
 
-  .slider-nav
-    margin: 10px auto
+  .reviews-slider-nav-mobile
+    margin: 30px auto 0 0
 
+  .order-services
+    background: transparent
+    padding: 0
+    .box-text
+      margin: 28px 0 70px
+    .container
+      padding: 0
+    .button-group
+      flex-direction: column
+      align-items: flex-start
+    .btn
+      margin: 0 0 40px
+      max-width: 190px
+
+  .order-services__content
+    max-width: none
+    padding: 50px 20px 55px
+    background: url("../img/bg_2-mobile.png") no-repeat center
+      size: cover
+
+  .order-services-img
+    display: block
+    width: 100%
+
+  .news
+    .line-title
+      .btn
+        display: none
+    .btn
+      margin: 30px auto 0
+
+  .news-slider-nav
+    margin: 39px auto 0 0
+
+  .poster-news
+    display: none
+
+  .news-block
+    margin: 0
+    border: none
+    flex-direction: column
+    align-items: flex-start
+    padding: 0
+    h3
+      font-size: 18px
+      margin: 0 0 30px
+    .box-text
+      display: none
+
+
+  .news-block__img
+    width: 100%
+
+  .news-block__content
+    width: 100%
+    padding: 20px 0
+
+  .date
+    font-size: 15px
+    margin: 0 0 20px
+
+  .links-red
+    font-size: 15px
+
+  .d-mobile
+    display: flex
+
+  .btn-grey
+    height: 38px
+    font-size: 15px
+
+  .partners-logos-nav
+    margin: 50px auto 0 0
+
+  .partners-logo
+    padding: 0
+    margin: 0
+
+  .partners-content .box-text
+    margin: 50px 0 0
+    font-size: 15px
+
+  .partners-content
+    margin: 0 0 50px
+
+  .advantages-wrapper-nav, .partners-logos-nav
+    display: flex
 
 @media only screen and (max-width : 480px)
   .dropDown-wrapper
@@ -318,25 +465,26 @@
 
   h1
     font-size: 30px
-    padding: 20px 0 0
+    padding: 40px 0 0
 
   h2
-    font-size: 28px
-    padding: 20px 0 0
-
+    font-size: 24px
+    padding: 23px 0 0
+    &:before
+      width: 15px
+      height: 8px
 
   .main
     h1
       margin: 0 0 30px
     .btn
-      max-width: 150px
+      max-width: 190px
       padding: 0
-    .links-accent
-      font-size: 12px
+
 
   .btn
-    font-size: 14px
-    height: 60px
+    font-size: 16px
+    height: 64px
 
   .category-links
     height: auto
@@ -354,12 +502,8 @@
       justify-content: center
       text-align: center
 
-  .order-services .btn
-    max-width: 150px
-    margin: 0 20px 0 0
-
   .links-accent
-    font-size: 14px
+    font-size: 15px
 
   .news-block__content
     width: 100%
@@ -371,38 +515,188 @@
   .news-block__img
     margin: 0 auto
 
-  .partners-logo
-    padding: 0 10px
 
-  footer .btn
-    height: 40px
-    max-width: 140px
+  footer
+    padding: 100px 0 20px
+    .btn
+      display: none
+    .logo
+      max-width: 93px
 
-  .address
-    max-width: 120px
+  .footer-box
+    margin: 0 0 40px
+    width: 100%
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    &:first-child
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        width: calc(100% - 103px)
+        background: rgba(0, 0, 0, 0.1)
+        height: 1px
+    &:last-child
+      margin: 0
 
   .footer-box-img
+    order: 1
+    max-width: 235px
+    margin: 70px 0 0
+
+  .box-contacts p
+    flex-direction: row
+    margin: 0 0 10px
+    a
+      display: inline
+      margin: 0 0 0 5px
+
+  .mail
     margin: 0 0 20px
-    max-width: 120px
 
   .phone
-    font-size: 16px
+    margin: 30px 0 9px
+    font-size: 24px
+
+  .footer-menu
+    display: none
+
+  .schedule
+    font-size: 14px
+    margin: 0
+
+  .footer-top
+    padding: 0
 
   .footer-bottom
+    border: none
     font-size: 12px
+    .container
+      padding: 0 20px
+      border: none
+      flex-direction: column
+      align-items: flex-start
+    p
+      margin: 0 0 10px
+
+  .box-text
+    font-size: 15px
+    line-height: 20px
+
+  .about-content .box-text
+    margin: 29px 0 50px
+
+  .about
+    .btn
+      max-width: 280px
+
+  .reviews-box
+    padding: 25px 20px 48px
+    min-height: 420px
+    margin: 0
+    h3
+      font-size: 18px
+    .box-text
+      font-size: 15px
+
+  .slick-dots .slick-active a
+    font-size: 16px
+
+  .slick-dots .slick-active
+    margin: 0 25px 0 0
+
+  .slick-dots li
+    margin: 0 25px 0 0
+
+  .reviews-box__top
+    flex-direction: column
+    align-items: flex-start
+
+  .logo-company
+    order: -1
+    margin: 0 0 30px
+    max-width: 104px
+
+  .btn-grey
+    height: 38px
+    font-size: 15px
+
+  .slider-nav
+    width: 122px
+    height: 38px
+
+    .icon-svg
+      margin: 0 27px
+
+  .slick-arrow
+    width: 15px
+    height: 8px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
-  .reviews-box h3
-    font-size: 20px
+  header .btn, header .dropDown-wrapper
+    display: none
 
-  .logo-company
-    max-width: 100px
+  h1
+    font-size: 24px
 
-  .reviews-box__top
-    min-height: auto
+  .button-group
+    flex-direction: column
+    align-items: flex-start
 
-@media only screen and (max-width : 360px)
+  .main
+    .btn
+      margin: 0 0 40px
+
   .category-links
-    font-size: 12px
+    width: 240px
+    margin: 0 auto -1px
+    height: 240px
+    padding: 40px 30px
+    font-size: 18px
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    &:hover
+      box-shadow: none
+    .icon-arrow
+      display: block
+      width: 16px
+      height: 16px
+    &:before, &:after
+      display: none
 
+  .main-category
+    flex-direction: column
+    align-items: center
+
+  .category-links:first-child:before
+    display: none
+
+  .category-links-one
+    margin: 0 auto 10px
+    border: none
+
+  .advantages-company
+    .container
+      flex-direction: column
+      align-items: center
+
+  .advantages-company__box
+    max-width: 120px
+    width: 100%
+    text-align: left
+    justify-content: flex-start
+    margin: 0 0 30px
+    font-size: 18px
+    &:last-child
+      margin: 0
+    p
+      text-align: left
+      justify-content: flex-start
+      font-size: 36px
+      sup
+        font-size: 18px

@@ -489,6 +489,9 @@ header
     font-size: 24px
     font-weight: bold
     margin: 29px 0 0
+  &:first-child
+    .num-overlay
+      display: none
 
 .advantages-box__num
   font-size: 24px
@@ -653,7 +656,8 @@ header
     transition: .3s ease
     border-radius: 50%
     background: #003764
-
+    &:last-child
+      margin: 0
     button
       display: none
     a
@@ -684,6 +688,9 @@ header
   .btn
     max-width: 202px
     margin: 0 40px 0 0
+
+.order-services-img
+  display: none
 
 .order-services__content
   max-width: 400px
@@ -811,7 +818,6 @@ footer
 
 
 
-
 .news-block__wrapper
   width: 100%
   display: flex
@@ -892,25 +898,58 @@ footer
 .btn-burger
   display: none
   flex-direction: column
-  align-items: center
+  align-items: flex-end
   justify-content: space-between
-  width: 20px
-  height: 15px
-  span
-    background: $accent
-    width: 100%
-    height: 2px
+  width: 30px
+  height: 19px
+  background: url("../img/burger.svg") no-repeat center
+    size: contain
+  transition: .3s ease
 
-.overlay
+.btn-burger.click
+  width: 23px
+  height: 23px
+  background: url("../img/close.svg") no-repeat center
+    size: contain
+
+  span
+    width: 0
+    height: 0
+
+.mobile-menu
+  display: none
   position: absolute
   left: 0
-  top: 0
-  width: 100%
-  height: 100%
-  background: $accent
-  opacity: .4
+  top: 96px
   z-index: 3
+  background: #fff
+  width: 100%
+  padding: 30px 40px 38px
+  .menu
+    display: block
+    margin: 0
+    width: 100%
+    background: transparent
+    li
+      margin: 0 0 25px
+      &:last-child
+        margin: 0
+      a
+        font-size: 16px
+        color: $accent
+  .dropDown-wrapper
+    margin: 40px 0 25px
+  .btn
+    height: 50px
+    max-width: 173px
+    font-size: 16px
+
+.slider-nav-mobile, .d-mobile, .advantages-wrapper-nav, .partners-logos-nav
   display: none
+  
+.partners-logos-nav
+  background: #fff
+
 
 @import "media"
 // Всегда в конце

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>P&B Terminal</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -23,6 +23,33 @@
 </head>
 
 <body>
+
+<div class="mobile-menu">
+    <ul class="menu">
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Экспедирование грузов</a></li>
+        <li><a href="#">Техника</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+
+    <div class="dropDown-wrapper lang-wrapper">
+        <div class="dropDown-item">
+            RU
+            <svg class="icon-dots icon-svg">
+                <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
+        </div>
+
+        <div class="dropDwn-menu">
+            <a href="#" class="lang-links">EN</a>
+            <a href="#" class="lang-links">LV</a>
+        </div>
+    </div>
+
+    <a href="#" class="btn btn-border">Заказать звонок</a>
+</div>
 
 <header>
     <div class="container">
@@ -174,7 +201,7 @@
                 <div class="text">
                     <p>Собственный таможенный склад на территории Рижского свободного порта</p>
                 </div>
-
+                <div class="num-overlay"><img src="img/01.svg" alt=""></div>
             </div>
 
             <div class="advantages-box">
@@ -232,6 +259,11 @@
                     </svg>
                 </a>
             </div>
+        </div>
+        <div class="slider-nav advantages-wrapper-nav">
+            <svg class="icon-svg">
+                <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
         </div>
     </div>
 </section>
@@ -294,7 +326,11 @@
             </div>
         </div>
 
-
+        <div class="reviews-slider-nav-mobile slider-nav slider-nav-mobile">
+            <svg class="icon-svg">
+                <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
+        </div>
     </div>
 </section>
 
@@ -316,7 +352,7 @@
                 </a>
             </div>
         </div>
-
+        <img src="img/img5.png" alt="" class="order-services-img">
     </div>
 </section>
 
@@ -417,6 +453,13 @@
                 </div>
             </div>
         </div>
+
+        <a href="#" class="btn btn-grey d-mobile">
+            <span class="text-btn">Все новости</span>
+            <svg class="icon-svg">
+                <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+        </a>
     </div>
 </section>
 
@@ -435,6 +478,12 @@
             <div class="partners-logo"><img src="img/partner3.png" alt=""></div>
             <div class="partners-logo"><img src="img/partner4.png" alt=""></div>
             <div class="partners-logo"><img src="img/partner5.png" alt=""></div>
+        </div>
+
+        <div class="partners-logos-nav slider-nav">
+            <svg class="icon-svg">
+                <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
         </div>
     </div>
 </section>
@@ -481,7 +530,6 @@
     </div>
 </footer>
 
-<div class="overlay"></div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
