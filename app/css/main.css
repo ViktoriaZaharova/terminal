@@ -1898,7 +1898,14 @@ textarea {
     .order-services .box-text {
       margin: 28px 0 70px; }
     .order-services .container {
-      padding: 0; }
+      padding: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
     .order-services .button-group {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1916,8 +1923,7 @@ textarea {
     background: url("../img/bg_2-mobile.jpg") no-repeat center;
       background-size: cover; }
   .order-services-img {
-    display: block;
-    width: 100%; }
+    display: block; }
   .news .line-title .btn {
     display: none; }
   .news .btn {
