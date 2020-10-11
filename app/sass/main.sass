@@ -484,6 +484,13 @@ header
   display: flex
   flex-direction: column
   align-items: flex-start
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
   .btn
     margin: auto 0 0
     max-width: 170px
@@ -501,6 +508,8 @@ header
   &:first-child
     .num-overlay
       display: none
+  >*
+    position: relative
 
 .advantages-box__num
   font-size: 24px
@@ -538,9 +547,11 @@ header
     background: url("../img/figure.svg") no-repeat center
       size: contain
 
-.bg-border
-  border: 4px solid #EBF0F5
-  background: #fff
+.box-border
+
+  background: transparent
+  &:before
+    border: 4px solid #EBF0F5
 
 .line-title
   width: 100%
@@ -1108,9 +1119,21 @@ footer
   h2
     margin: 0 0 40px
   .advantages-box
-    max-width: 380px
+    max-width: 98%
     width: 100%
     margin: 0 auto
+    cursor: initial
+    &:before
+      display: none
+    .advantages-box__num
+      font-size: 18px
+    h3
+      font-size: 18px
+      margin: 30px 0 0
+    .text
+      font-size: 16px
+      line-height: 22px
+      margin: 20px 0 0
 
 .section-content__slider
   width: 100%
@@ -1152,7 +1175,7 @@ footer
   width: 100%
   display: flex
   flex-direction: row
-  align-items: center
+  align-items: flex-start
   justify-content: flex-start
   color: rgba(0, 0, 0, 0.7)
   font-size: 14px
@@ -1271,8 +1294,8 @@ textarea
   margin: 70px 0 0
 
 .footer
-  margin: 200px 0 0
-  padding: 0
+  padding: 200px 0 0
+  margin: 0
   .footer-top
     padding: 0 0 70px
   .footer-bottom
