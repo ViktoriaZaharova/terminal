@@ -1044,6 +1044,8 @@ footer
   .btn
     max-width: 202px
     box-shadow: none
+  .menu-min
+    display: none
 
 .menu-page
   margin: auto 0 100px
@@ -1351,6 +1353,66 @@ textarea
     margin: 0
   .box-contacts p
     margin: 0 0 20px
+
+//pagination-wrapper
+.pagination-wrapper
+  margin: 0 0 50px
+  .container
+    flex-direction: column
+    align-items: flex-start
+
+
+.pagination-nav
+  margin: 30px auto 0 0
+  width: 122px
+  height: 38px
+
+.links-prev
+  width: 15px
+  height: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  transform: rotate(180deg)
+  .icon-svg
+    margin: 0
+    width: 100%
+    height: 100%
+
+.links-next
+  width: 15px
+  height: 8px
+  display: flex
+  align-items: center
+  justify-content: center
+  .icon-svg
+    margin: 0
+    width: 100%
+    height: 100%
+
+.links-disabled
+  opacity: .5
+
+.menu-min
+  overflow-x: auto
+  width: 100%
+  display: flex
+  align-items: stretch
+
+  li
+    margin: 0 4px 0 0
+    a
+      white-space: nowrap
+      font-size: 16px
+      font-weight: bold
+      color: $accent
+      padding: 15px 22px 16px
+      background: #EBF0F5
+      border-radius: 3px
+      &:hover
+        box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1)
+    .active
+      color: rgba(0, 55, 100, 0.5)
 
 
 @import "media"
