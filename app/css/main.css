@@ -1201,7 +1201,7 @@ footer {
   .content__right .container {
     max-width: 980px;
     margin: 0 auto 0 0;
-    padding: 0 85px 0 100px; }
+    padding: 0 80px 0 100px; }
 
 .content__left {
   width: 380px;
@@ -1265,9 +1265,27 @@ footer {
   margin: 40px 0; }
 
 .image-section {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 56.25%; }
   .image-section img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 .mb-70 {
   margin: 0 0 70px; }
@@ -1694,10 +1712,34 @@ textarea {
       background: #EBF0F5;
       border-radius: 3px; }
       .menu-min li a:hover {
-        -webkit-box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1);
-                box-shadow: inset 0px 0px 20px rgba(0, 55, 100, 0.1); }
+        -webkit-box-shadow: inset 0 0 20px rgba(0, 55, 100, 0.1);
+                box-shadow: inset 0 0 20px rgba(0, 55, 100, 0.1); }
     .menu-min li .active {
       color: rgba(0, 55, 100, 0.5); }
+
+.wrapper-contacts-page {
+  padding: 0; }
+
+.maps {
+  width: 100%;
+  min-width: 1250px;
+  height: 440px;
+  margin: 0 0 70px; }
+  .maps iframe {
+    width: 100%;
+    height: 100%; }
+
+.image-section__overlay {
+  margin: 70px 0;
+  width: 100%; }
+  .image-section__overlay:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05); }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -2528,7 +2570,11 @@ textarea {
       .footer .footer-bottom .container:before {
         display: none; }
     .footer .box-contacts p {
-      margin: 0 0 10px; } }
+      margin: 0 0 10px; }
+  .image-section {
+    max-height: 158px; }
+  .image-section__overlay {
+    max-height: 255px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px) {
