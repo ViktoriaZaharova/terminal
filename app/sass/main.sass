@@ -1657,10 +1657,129 @@ textarea
 
 //service menu
 .footer-service
+  position: relative
+  margin: 200px 0 0
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%,0)
+    max-width: 1340px
+    width: 100%
+    height: 1px
+    background: rgba(0, 0, 0, 0.1)
   .container
     max-width: 1340px
 
 
+
+.service-menu-section
+  padding: 50px 0 0
+  width: 100%
+  .container
+    max-width: 1340px
+  .title-line
+    margin: 0 0 83px
+
+.title-line
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+  h1
+    width: auto
+  .box-text
+    width: calc(100% - 480px)
+    padding: 40px 0 0
+
+.service-menu-box
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-direction: column
+  flex-wrap: wrap
+  margin: 0 0 130px
+  padding: 0 0 0 480px
+  position: relative
+  &:last-child
+    margin: 0
+
+  .box-text
+    color: #003764
+    font-size: 18px
+    max-width: 380px
+    width: 100%
+    margin: 0 0 32px
+    line-height: 21px
+  .btn
+    max-width: 202px
+    height: 70px
+    font-size: 18px
+    box-shadow: none
+
+.service-menu-box__menu
+  flex-wrap: wrap
+  overflow-x: visible
+  margin: 80px 0 0
+  li
+    margin: 0 4px 4px 0
+    &:last-child
+      margin: 0 0 4px 0
+
+.service-menu-box__img
+  display: flex
+  align-items: center
+  justify-content: center
+  max-width: 380px
+  height: 214px
+  overflow: hidden
+  width: 100%
+  position: absolute
+  left: 0
+  top: 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.05)
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+
+.service-menu-box__title
+  margin: 0 0 40px
+  display: flex
+  align-items: center
+  font-size: 24px
+  font-weight: bold
+  color: $accent
+  &:hover
+    color: $red
+    .service-menu-box__title-icon
+      fill: $red
+
+
+.service-menu-box__title-text
+  border-bottom: 1px solid rgba($accent, .3)
+
+.service-menu-box__title-icon
+  margin: 0 0 0 30px
+  fill: $accent
+  width: 16px
+  height: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.service-menu-box__menu-nav
+  display: none
 
 @import "media"
 // Всегда в конце

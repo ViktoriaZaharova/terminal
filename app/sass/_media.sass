@@ -22,6 +22,10 @@
           width: calc(100% - 60px)
           left: 30px
 
+  .footer-service
+    &:before
+      width: calc(100% - 40px)
+
 @media only screen and (max-width : 1200px)
   .container
     padding: 0 15px
@@ -332,6 +336,65 @@
     .container
       flex-direction: column
       align-items: flex-start
+
+  .service-menu-box
+    padding: 0
+    margin: 0 0 70px
+    .box-text
+      margin: 0 0 40px
+      color: #000000
+      font-size: 15px
+      line-height: 20px
+    .btn
+      height: 64px
+      max-width: 190px
+      font-size: 16px
+
+  .service-menu-box__img
+    position: relative
+    max-width: 280px
+    height: 158px
+
+  .title-line
+    h1
+      margin: 0 0 29px
+      width: 100%
+    .box-text
+      padding: 0
+      order: 1
+      width: 100%
+
+  .service-menu-section
+    padding: 30px 0 0
+    .title-line
+      margin: 0 0 50px
+
+  .service-menu-box__title
+    margin: 0 0 30px
+    width: 100%
+    font-size: 18px
+
+  .service-menu-box__title-icon
+    width: 12px
+    height: 12px
+    margin: 0 0 0 13px
+
+  .service-menu-box__menu
+    margin: 30px 0 0
+    width: 100%
+    li
+      margin-bottom: 4px
+
+
+  .service-menu-box-last
+    .service-menu-box__img
+      display: none
+
+  .footer-service
+    margin: 100px 0 0
+    padding: 0 0 20px
+    &:before
+      display: none
 
 
 @media only screen and (max-width : 768px)
@@ -755,7 +818,16 @@
   .icon-resize
     display: none
 
+  .service-menu-box__menu-nav
+    display: flex
+    margin: 30px auto 0 0
+    min-width: 122px
+    width: 122px
+    height: 38px
 
+  .service-menu-box__menu
+    width: calc(100% + 20px)
+    margin: 30px 20px 0 0
 
 @media only screen and (max-width : 480px)
   .dropDown-wrapper
