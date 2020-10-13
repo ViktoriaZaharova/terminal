@@ -2153,7 +2153,7 @@ textarea {
 
 .service-menu-box__title-icon {
   margin: 0 0 0 30px;
-  fill: #003764;
+  fill: #C32032;
   width: 16px;
   height: 16px;
   display: -webkit-box;
@@ -2596,7 +2596,9 @@ textarea {
       width: calc(100% - 60px);
       left: 30px; }
   .footer-service:before {
-    width: calc(100% - 40px); } }
+    width: calc(100% - 40px); }
+  .service-menu-section .container {
+    padding: 0 20px; } }
 
 @media only screen and (max-width: 1200px) {
   .container {
