@@ -1849,13 +1849,12 @@ textarea
   padding: 50px 50px 40px 40px
   color: #003764
   font-size: 16px
-  font-weight: bold
-  line-height: 40px
-  .box-text
+  h3
     position: relative
     padding: 25px 0 0
     line-height: 40px
     font-size: 16px
+    font-weight: bold
     &:before
       content: ''
       position: absolute
@@ -1865,6 +1864,9 @@ textarea
         size: contain
       width: 13px
       height: 10px
+  .box-text
+    margin: 30px 0 0
+    line-height: 22px
 
 //company-values
 .company-values
@@ -2013,6 +2015,62 @@ textarea
     font-size: 18px
     font-weight: bold
     margin: 0 10px 0 0
+
+//equipment-section
+.equipment-section
+  &:last-child
+    margin: 0
+
+.equipment-section__wrapper
+  margin: 70px 0 0
+
+.equipment-section__content
+  h3
+    font-size: 18px
+    line-height: 21px
+
+.equipment-section__bottom
+  width: 100%
+  background: #EBF0F5
+  margin: 2px 0 0
+  padding: 60px 40px
+  font-size: 16px
+  color: $accent
+  ul
+    display: flex
+    align-items: center
+    width: 100%
+    flex-wrap: wrap
+    li
+      margin: 0 70px 0 0
+      strong
+        display: block
+        font-weight: bold
+      p
+        margin: 10px 0 0
+      &:last-child
+        margin: 0
+
+.list-dost
+  li
+    padding: 0 0 0 38px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      border-radius: 50%
+      background: $red
+      width: 8px
+      height: 8px
+
+.mb-100
+  margin-bottom: 100px
+
+.mt-40
+  margin-top: 40px
 
 
 @import "media"
