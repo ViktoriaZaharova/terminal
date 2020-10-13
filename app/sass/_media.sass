@@ -33,6 +33,10 @@
   .footer-bottom .container
     padding: 20px 15px
 
+  .characteristics-section__content .box-text
+    font-size: 15px
+    line-height: 30px
+
 
 @media only screen and (max-width : 1170px)
   .menu li
@@ -65,6 +69,26 @@
 
   .partners-logos
     padding: 0 20px
+
+  .characteristics-section__content
+    width: 100%
+    padding: 30px 40px 30px 30px
+
+  .characteristics-section__wrapper .article-wrapper
+    width: 100%
+
+  .company-section .advantages-company .advantages-company__box:nth-child(2), .company-section .advantages-company .advantages-company__box
+    margin: 0
+
+  .company-section .advantages-company
+    justify-content: space-between
+
+  .certificate-slider__content
+    padding: 0 0 0 30px
+
+  .company-values__wrapper .advantages-box
+    padding-right: 60px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -396,6 +420,15 @@
     &:before
       display: none
 
+  .wrapper-company-page
+    .menu-page
+      display: none
+
+  .company-section .article-wrapper
+    margin: 30px 0
+
+  .company-values__wrapper
+    margin: 40px 0 0
 
 @media only screen and (max-width : 768px)
   header .menu, .header .menu
@@ -634,6 +667,12 @@
 
   .advantages-wrapper-nav
     margin: 30px 0 0 0
+    width: 122px
+    height: 38px
+    min-width: 122px
+    .slick-arrow
+      width: 15px
+      height: 8px
 
   .advantages-box__content
     padding: 0
@@ -828,6 +867,90 @@
   .service-menu-box__menu
     width: calc(100% + 20px)
     margin: 30px 20px 0 0
+
+  .company-section .advantages-company
+    padding: 40px 0
+    flex-direction: column
+    max-width: 185px
+    width: 100%
+    margin: 0 auto
+    .advantages-company__box
+      margin: 0 0 40px
+      &:nth-child(2)
+        margin: 0 0 40px
+
+  .characteristics-section h2
+    margin: 0 0 30px
+
+  .characteristics-section__wrapper
+    margin: 0 0 50px
+
+  .characteristics-section__content .box-text:before
+    width: 10px
+    height: 8px
+
+  .characteristics-section__content .box-text
+    line-height: 30px
+
+  .characteristics-section
+    .mb-70
+      margin: 0 0 50px
+
+  .company-values__wrapper
+    .advantages-box
+      padding: 30px 20px 0
+      height: 390px
+      margin: 0
+      .advantages-box__num
+        position: relative
+        left: 0
+        top: 0
+        margin: 0 0 25px
+        font-size: 16px
+      h3
+        margin: 0 0 20px
+        font-size: 16px
+      .text
+        font-size: 15px
+        line-height: 19px
+      .advantages-box__content
+        font-size: 15px
+        line-height: 19px
+
+  .company-values
+    margin: 0 0 50px
+
+  .certificate-slider__box
+    flex-direction: column
+    align-items: center
+    padding: 20px 20px 40px
+
+  .certificate-gallery
+    margin: 0 auto 40px
+
+  .certificate-slider__content
+    width: 100%
+    padding: 0
+    text-align: center
+    .box-text
+      display: none
+    h3
+      font-size: 18px
+      margin: 0 auto 54px
+      padding: 0
+      &:before
+        display: none
+
+  .counter-slide
+    bottom: 20px
+
+  .certificate-section
+    .certificate-slider-nav
+      order: 1
+      margin: 30px auto 0 0
+
+  .certificate-section-wrapper
+    margin: 40px 0 0
 
 @media only screen and (max-width : 480px)
   .dropDown-wrapper
