@@ -213,6 +213,23 @@
       margin: 0 15px 0 0
       min-width: 24px
 
+  .modal__wrapper-img
+    position: relative
+    order: 1
+    margin: 10px auto 0
+    max-width: none
+    img
+      position: relative
+      min-width: auto
+
+  #modal__call
+    .modal__wrapper-img
+      display: none
+
+  .modal__wrapper-content
+    width: 100%
+    padding: 78px 0 40px
+
 
 @media only screen and (max-width : 860px)
   .advantages-box
@@ -998,6 +1015,31 @@
 
   .mb-100
     margin-bottom: 50px
+
+  .modal__div h2
+    margin: 0 0 40px
+    font-size: 18px
+    padding: 23px 0 0
+    &:before
+      width: 10px
+      height: 8px
+
+  .modal__close
+    background: transparent
+    padding: 0
+    width: 23px
+    height: 23px
+    top: 25px
+    right: 0
+
+  .modal__div .box-text
+    line-height: 40px
+    font-size: 24px
+
+  .modal__wrapper-img
+    max-width: 280px
+    height: 370px
+    overflow: hidden
 
 @media only screen and (max-width : 480px)
   .dropDown-wrapper

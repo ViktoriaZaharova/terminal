@@ -315,7 +315,7 @@
                                 <input class="checkbox-inp" type="checkbox" name="checkbox" checked>
                                 <span class="checkbox-custom"></span>
                                 <span class="label">Нажимая на кнопку Отправить, я <br>соглашаюсь с <a href="#"
-                                                                                                   class="links">условиями обработки</a> персональных данных</span>
+                                                                                                       class="links">условиями обработки</a> персональных данных</span>
                             </label>
                         </div>
 
@@ -368,6 +368,84 @@
     </div>
 </div>
 
+<div class="modal__div" id="modal__call">
+    <div class="modal__wrapper">
+
+        <div class="container">
+            <div class="modal__wrapper-img"><img src="img/modal.png" alt=""></div>
+            <div class="modal__wrapper-content">
+                <div class="modal__close">
+                    <svg class="icon-svg">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </div>
+
+                <h2>ФОРМА ОБРАТНОЙ СВЯЗИ</h2>
+
+                <form method="post" class="form form-callback">
+                    <div class="form-column">
+                        <label><input type="text" placeholder="Ваше имя" name="name"></label>
+                        <label><input type="text" placeholder="Ваш телефон" name="phone"></label>
+                        <label><input type="text" placeholder="Электронная почта" name="mail"></label>
+                    </div>
+
+                    <div class="form-column">
+                        <label class="label-message"><textarea name="message"
+                                                               placeholder="Ваше сообщение / вопрос"></textarea></label>
+                    </div>
+
+                    <div class="form-bottom">
+
+                        <div class="form-column">
+                            <button type="submit" class="btn btn-border">Отправить</button>
+                        </div>
+
+                        <div class="form-column">
+                            <label class="checkbox">
+                                <input class="checkbox-inp" type="checkbox" name="checkbox" checked>
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Нажимая на кнопку Отправить, я <br>соглашаюсь с <a href="#"
+                                                                                                       class="links">условиями обработки</a> персональных данных</span>
+                            </label>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal__div" id="modal__thanks">
+    <div class="modal__wrapper">
+
+        <div class="container">
+            <div class="modal__wrapper-img"><img src="img/modal.png" alt=""></div>
+            <div class="modal__wrapper-content">
+                <div class="modal__close">
+                    <svg class="icon-svg">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </div>
+
+                <h2>СПАСИБО!</h2>
+
+                <div class="box-text">
+                    <p>Ваша заявка
+                        принята в работу
+                        - мы свяжемся с Вами
+                        в ближайшее время.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay"></div>
+
+<a href="#modal__thanks" class="btn btn-red open_modal">Окно спасибо!</a>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/libs.min.js"></script>
