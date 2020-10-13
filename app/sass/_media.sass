@@ -11,7 +11,7 @@
     .container
       padding: 0 20px
 
-  .content__right .container
+  .content__right .container, .footer-service .container
     padding: 0 20px
 
   .footer
@@ -321,7 +321,17 @@
       font-size: 15px
       margin: 0 0 20px
 
+  .pagination-article
+    display: none
+    .pagination-btn__icon
+      background: #EBF0F5
 
+  .pagination-article.d-mobile
+    display: block
+    margin: 50px 0 0
+    .container
+      flex-direction: column
+      align-items: flex-start
 
 
 @media only screen and (max-width : 768px)
@@ -736,6 +746,17 @@
   .pagination-list
     display: none
 
+  .article-section .date, .article-wrapper
+    margin: 0 0 30px
+
+  .article-section
+    margin: 0 0 40px
+
+  .icon-resize
+    display: none
+
+
+
 @media only screen and (max-width : 480px)
   .dropDown-wrapper
     height: 40px
@@ -1000,6 +1021,9 @@
       p
         margin: 0 0 10px
 
+  .article-slider-nav
+    width: 146px
+    height: 94px
 
 @media only screen and (max-width : 420px)
   header .btn, header .dropDown-wrapper
